@@ -30,7 +30,7 @@ LISTING_FILE=push_datafiles.txt
 if [ "${ARGC}" -ge 1 ]; then
   LISTING_FILE=$1
 fi
-OUTPUT_DIR="./"
+OUTPUT_DIR="."
 if [ "${ARGC}" -ge 2 ]; then
   OUTPUT_DIR=$2
 fi
@@ -43,7 +43,8 @@ function download_file {
   FILE=$1
   BUCKET="https://storage.googleapis.com/brain-robotics-data"
   URL="${BUCKET}/${FILE}"
-  OUTPUT_FILE="${OUTPUT_DIR}/${FILE}"
+  #OUTPUT_FILE="${OUTPUT_DIR}/${FILE}"
+  OUTPUT_FILE="${FILE}"
   DIRECTORY=`dirname ${OUTPUT_FILE}`
   echo DIRECTORY=$DIRECTORY
   mkdir -p "${DIRECTORY}"

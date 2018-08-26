@@ -21,8 +21,8 @@ import tensorflow as tf
 from tensorflow.python.platform import app
 from tensorflow.python.platform import flags
 
-from prediction_input import build_tfrecord_input
-from prediction_model import construct_model
+from research.video_prediction.prediction_input import build_tfrecord_input
+from research.video_prediction.prediction_model import construct_model
 
 # How often to record tensorboard summaries.
 SUMMARY_INTERVAL = 40

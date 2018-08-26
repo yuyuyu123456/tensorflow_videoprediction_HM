@@ -111,7 +111,8 @@ def ptb_producer(raw_data, batch_size, num_steps, name=None):
                       [batch_size, batch_len])
 
     epoch_size = (batch_len - 1) // num_steps
-    assertion = tf.assert_positive(
+    assertion = tf.\
+      assert_positive(
         epoch_size,
         message="epoch_size == 0, decrease batch_size or num_steps")
     with tf.control_dependencies([assertion]):
